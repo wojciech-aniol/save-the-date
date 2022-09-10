@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ala i Wojtek - save the date</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Qwitcher+Grypen&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script>
+        var countDownDate = new Date("Jul 8, 2023 16:00").getTime();
+    (function () {
+        const second = 1000,
+                minute = second * 60,
+                hour = minute * 60,
+                day = hour * 24;
+
+        const countDown = new Date('2023-07-08T16:00:00').getTime(),
+            x = setInterval(function() {    
+                const now = new Date().getTime();
+                const distance = countDown - now;
+
+                document.getElementById("days").innerText = Math.floor(distance / (day)),
+                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+                //do something later when date is reached
+                if (distance < 0) {
+                document.getElementById("headline").innerText = "";
+                document.getElementById("countdown").style.display = "none";
+                document.getElementById("content").style.display = "block";
+                clearInterval(x);
+                }
+            }, 1000)
+        }());
+    </script>
+</head>
+<body class="">
+    <section class="bg-[#fffffa]">
+        <div class="min-h-screen">
+            <div class="flex h-full items-center justify-center xl:justify-start">
+                <div class="flex flex-col min-h-screen h-full text-center w-full sm:w-1/2 px-4 py-2 relative z-10">
+                    <div class="flex flex-auto items-center justify-center flex-col">
+                        <img src="./assets/image/bgFlowe.png" class="absolute top-0 left-0 z-0 opacity-30 h-1/2" />
+                        <div class="z-10">
+                            <h2 class="mt-8 sm:mt-2 text-5xl sm:text-6xl mb-2 sm:mb-6">8 lipca 2023</h2>
+                            <h2 class="font-semibold text-6xl md:text-6xl lg:text-8xl text-[#bdada6] leading-normal">
+                                Zapisz datę
+                            </h2>
+                            <div id="countdown" class="mt-4 sm:mt-8">
+                                <ul>
+                                    <li class="p-2 text-md"><span class="text-4xl sm:text-6xl" id="days"></span>dni</li>
+                                    <li class="p-2 text-md"><span class="text-4xl sm:text-6xl" id="hours"></span>godziny</li>
+                                    <li class="p-2 text-md"><span class="text-4xl sm:text-6xl" id="minutes"></span>minuty</li>
+                                    <li class="p-2 text-md"><span class="text-4xl sm:text-6xl" id="seconds"></span>sekundy</li>
+                                </ul>
+                                </div>
+                            <img src="./assets/image/icon.png" class="w-12 mt-6 mx-auto" />
+                            <p class="leading-tight font-light text-xl text-gray-600 mt-2 mb-6 sm:mb-12 max-w-xs sm:max-w-lg mx-auto">Pobieramy się!
+                                <br />Prosimy, zarezerwujcie tę datę w swoim kalendarzu, aby celebrować z nami te wyjątkowe i radosne chwile.
+                            </p>
+                            <img src="./assets/image/hr.png" class="w-1/4 mx-auto">
+                            <p class="leading-tight font-light text-gray-600">
+                                Zaproszenia z dokładnymi informacjami, dotyczącymi miejsca ceremonii i przyjęcia <br/>
+                                przekażemy w późniejszym terminie.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center sm:flex-row flex-col mt-4 sm:mt-0 pb-2 sm:pb-6 z-10 w-full justify-center">
+                        <div class="flex items-center justify-self-start items-between mb-2 sm:mb-10 lg:mb-0 flex-auto">
+                            <h1 class="text-7xl">Ala i Wojtek</h1>
+                        </div>
+                        <div class="justify-self-end">
+                            <p class="text-gray-500">Dodaj do kalendarza</p> 
+                            <p> 
+                                <a href="https://www.addevent.com/event/WS14888862+apple" title="Apple" target="_blank" style="display:inline;">
+                                    <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-apple-t1.png" alt="Apple" style="width:45px;display:inline;">
+                                </a> 
+                                <a href="https://www.addevent.com/event/WS14888862+google" title="Google" target="_blank" style="display:inline;">
+                                    <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-google-t1.png" alt="Google" style="width:45px;display:inline;">
+                                </a> 
+                                <a href="https://www.addevent.com/event/WS14888862+outlook" title="Outlook" target="_blank" style="display:inline;">
+                                    <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-outlook-t1.png" alt="Outlook" style="width:45px;display:inline;">
+                                </a> 
+                                <a href="https://www.addevent.com/event/WS14888862+outlookcom" title="Outlook.com" target="_blank" style="display:inline;">
+                                    <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-outlookcom-t1.png" alt="Outlook.com" style="width:45px;display:inline;">
+                                </a> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden sm:flex items-start justify-start w-full h-screen sm:w-1/2 bg-[#bdada6]">
+                    <img src="assets/image/DSC.jpg" class="max-h-screen w-full h-full object-contain p-8 sm:p-16" alt="Home img">
+                </div>
+            </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,22 @@
+h1 {
+  font-family: 'Qwitcher Grypen';
+  font-size: 50vh;
+}
+
+h2 {
+  font-family: 'Pinyon Script';
+}
+
+body {
+  font-family: 'Lato';
+}
+
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+li span {
+  display: block;
+}
